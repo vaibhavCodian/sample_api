@@ -81,15 +81,12 @@ class HomePageState extends State<HomePage> {
             return ListTile(
                 title: Text(client.name),
                 subtitle: Text(client.company),
-                trailing: Align(
-                  alignment: Alignment.topLeft,
-                  child: Column(
+                trailing:Column(
                     children: [
                       Text("paid +"+client.invoicepaid,  style: TextStyle(color: Colors.green), textAlign: TextAlign.left,),
                       Text("pending "+client.invoicepaid,  style: TextStyle(color: Colors.redAccent), textAlign: TextAlign.left,)
                     ],
                   ),
-                )
             );
           },
           separatorBuilder: (context, index) => Divider(),
